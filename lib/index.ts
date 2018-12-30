@@ -1,24 +1,24 @@
-import { Router, Request, Response } from 'express'
+import { Request, Response, Router } from 'express'
 import { ActorSystem } from 'tarant'
 
-export default function SyncController(system: ActorSystem, config: any) {
+const SyncController = (system: ActorSystem, config: any): Router => {
   const router: Router = Router()
 
   router.get(`${config.paths.pull}/:id`, async (req: Request, res: Response) => {
     try {
-       const actor = (await system.actorFor(req.params.id)) as any
-       res.json(await actor.toJson())
+      const actor = (await system.actorFor(req.params.id)) as any
+      res.json(await actor.toJson())
     } catch (_) {
       res.sendStatus(404)
     }
   })
 
   router.post(`${config.paths.push}/:id`, async (req: Request, res: Response) => {
-     let actor
+    let actor
     try {
-        actor = (await system.actorFor(req.params.id)) as any
+      actor = (await system.actorFor(req.params.id)) as any
     } catch (_) {
-        actor = (await system.actorOf(config.ActorTypes[req.body.type], [req.params.id])) as any
+      actor = (await system.actorOf(config.ActorTypes[req.body.type], [req.params.id])) as any
     }
     actor.updateFrom(req.body)
     res.sendStatus(200)
@@ -26,3 +26,5 @@ export default function SyncController(system: ActorSystem, config: any) {
 
   return router
 }
+
+export default SyncController
