@@ -18,7 +18,7 @@ const SyncController = (system: ActorSystem, config: any): Router => {
     try {
       actor = (await system.actorFor(req.params.id)) as any
     } catch (_) {
-      actor = (await system.actorOf(config.ActorTypes[req.body.type], [req.params.id])) as any
+      actor = (await system.actorOf(config.actorTypes[req.body.type], [req.params.id])) as any
     }
     actor.updateFrom(req.body)
     res.sendStatus(200)

@@ -16,7 +16,7 @@ let config: any = {
     pull: '/pull',
     push: '/push',
   },
-  ActorTypes: { FakeActor },
+  actorTypes: { FakeActor },
 }
 describe('index exports function that returns  express router', () => {
   let supertest: any
