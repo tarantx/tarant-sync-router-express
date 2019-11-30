@@ -70,33 +70,11 @@ describe('index exports function that returns  express router', () => {
   })
 
   describe('push', () => {
-    it('should update state if actor exists', async () => {
-      const id = faker.random.uuid(),
-        body = { stuff: faker.random.uuid() },
-        ActorSystemMock = {
-          actorFor: jest.fn(),
-        },
-        ActorMock = {
-          updateFrom: jest.fn(),
-        }
-
-      let system: ActorSystem = jest.fn<ActorSystem>(() => ActorSystemMock)()
-      setupController(system)
-      ActorSystemMock.actorFor.mockResolvedValue(ActorMock)
-
-      const result = await supertest.post(`${config.paths.push}/${id}`).send(body)
-
-      expect(ActorSystemMock.actorFor).toHaveBeenCalledWith(id)
-      expect(ActorMock.updateFrom).toHaveBeenCalledWith(body)
-      expect(result.statusCode).toEqual(200)
-    })
-
-    it('should crate actor and initialize state if actor does not exists', async () => {
+    it('should update state of an actor', async () => {
       const id = faker.random.uuid(),
         body = { stuff: faker.random.uuid(), type: 'FakeActor' },
         ActorSystemMock = {
-          actorFor: jest.fn(),
-          actorOf: jest.fn(),
+          resolveOrNew: jest.fn(),
         },
         ActorMock = {
           updateFrom: jest.fn(),
@@ -104,13 +82,11 @@ describe('index exports function that returns  express router', () => {
 
       let system: ActorSystem = jest.fn<ActorSystem>(() => ActorSystemMock)()
       setupController(system)
-      ActorSystemMock.actorFor.mockRejectedValue('')
-      ActorSystemMock.actorOf.mockResolvedValue(ActorMock)
+      ActorSystemMock.resolveOrNew.mockResolvedValue(ActorMock)
 
       const result = await supertest.post(`${config.paths.push}/${id}`).send(body)
 
-      expect(ActorSystemMock.actorFor).toHaveBeenCalledWith(id)
-      expect(ActorSystemMock.actorOf).toHaveBeenCalledWith(FakeActor, [id])
+      expect(ActorSystemMock.resolveOrNew).toHaveBeenCalledWith(id, FakeActor, [id])
       expect(ActorMock.updateFrom).toHaveBeenCalledWith(body)
       expect(result.statusCode).toEqual(200)
     })
