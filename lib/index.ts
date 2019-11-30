@@ -14,14 +14,13 @@ const SyncController = (system: ActorSystem, config: any): Router => {
   })
 
   router.post(`${config.paths.push}/:id`, async (req: Request, res: Response) => {
-    let actor
     try {
-      actor = (await system.actorFor(req.params.id)) as any
-    } catch (_) {
-      actor = (await system.actorOf(config.actorTypes[req.body.type], [req.params.id])) as any
+      const actor: any = await system.resolveOrNew(req.params.id, config.actorTypes[req.body.type], [req.params.id])
+      actor.updateFrom(req.body)
+      res.sendStatus(200)
+    } catch (error) {
+      res.send(500)
     }
-    actor.updateFrom(req.body)
-    res.sendStatus(200)
   })
 
   return router

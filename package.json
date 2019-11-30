@@ -21,6 +21,7 @@
   "scripts": {
     "prepare": "yarn build",
     "build": "tsc",
+    "build:dev": "nodemon",
     "format": "prettier --write \"**/*.ts\" && tslint -p tsconfig.json --fix lib/**/*.ts -t verbose",
     "lint": "tslint -p tsconfig.json",
     "test": "yarn format && yarn lint && jest test",
@@ -48,6 +49,7 @@
     "coveralls": "3.0.2",
     "faker": "4.1.0",
     "jest": "23.6.0",
+    "nodemon": "1.18.10",
     "prettier": "1.15.3",
     "supertest": "3.3.0",
     "ts-jest": "23.10.5",
