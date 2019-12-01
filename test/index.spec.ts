@@ -37,11 +37,11 @@ describe('index exports function that returns  express router', () => {
     it('should pull actor data if found', async () => {
       const id = faker.random.uuid(),
         expectedresult = { stuff: faker.random.uuid() },
-        ActorSystemMock = {
+        ActorSystemMock: any = {
           actorFor: jest.fn(),
         }
 
-      let system: ActorSystem = jest.fn<ActorSystem>(() => ActorSystemMock)()
+      let system: ActorSystem = jest.fn<ActorSystem, []>(() => ActorSystemMock)()
       setupController(system)
       ActorSystemMock.actorFor.mockResolvedValue({
         toJson: () => Promise.resolve(expectedresult),
@@ -54,11 +54,11 @@ describe('index exports function that returns  express router', () => {
 
     it('should return 404 if unable to find actor', async () => {
       const id = faker.random.uuid(),
-        ActorSystemMock = {
+        ActorSystemMock: any = {
           actorFor: jest.fn(),
         }
 
-      let system: ActorSystem = jest.fn<ActorSystem>(() => ActorSystemMock)()
+      let system: ActorSystem = jest.fn<ActorSystem, []>(() => ActorSystemMock)()
       setupController(system)
       ActorSystemMock.actorFor.mockRejectedValue('')
 
@@ -73,14 +73,14 @@ describe('index exports function that returns  express router', () => {
     it('should update state of an actor', async () => {
       const id = faker.random.uuid(),
         body = { stuff: faker.random.uuid(), type: 'FakeActor' },
-        ActorSystemMock = {
+        ActorSystemMock: any = {
           resolveOrNew: jest.fn(),
         },
         ActorMock = {
           updateFrom: jest.fn(),
         }
 
-      let system: ActorSystem = jest.fn<ActorSystem>(() => ActorSystemMock)()
+      let system: ActorSystem = jest.fn<ActorSystem, []>(() => ActorSystemMock)()
       setupController(system)
       ActorSystemMock.resolveOrNew.mockResolvedValue(ActorMock)
 
