@@ -41,16 +41,16 @@
   "repository": "git@github.com:tarantx/tarant-sync-router-express.git",
   "license": "MIT",
   "devDependencies": {
-    "@types/express": "4.17.4",
+    "@types/express": "4.17.6",
     "@types/faker": "4.1.11",
     "@types/jest": "25.2.1",
-    "@types/node": "13.11.0",
+    "@types/node": "13.11.1",
     "body-parser": "1.19.0",
     "coveralls": "3.0.11",
     "faker": "4.1.0",
-    "jest": "25.2.7",
-    "nodemon": "2.0.2",
-    "prettier": "2.0.2",
+    "jest": "25.3.0",
+    "nodemon": "2.0.3",
+    "prettier": "2.0.4",
     "supertest": "4.0.2",
     "ts-jest": "25.3.1",
     "tslint": "6.1.1",
@@ -60,7 +60,7 @@
   "dependencies": {
     "@types/supertest": "^2.0.8",
     "express": "4.17.1",
-    "tarant": "2.7.19",
+    "tarant": "2.7.20",
     "tslib": "1.11.1"
   },
   "jest": {
