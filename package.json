@@ -60,7 +60,7 @@
   "dependencies": {
     "@types/supertest": "^2.0.9",
     "express": "4.17.1",
-    "tarant": "2.7.29",
+    "tarant": "2.7.30",
     "tslib": "2.0.0"
   },
   "jest": {
