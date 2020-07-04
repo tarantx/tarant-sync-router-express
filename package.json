@@ -55,12 +55,12 @@
     "ts-jest": "26.1.1",
     "tslint": "6.1.2",
     "tslint-config-prettier": "1.18.0",
-    "typescript": "3.9.5"
+    "typescript": "3.9.6"
   },
   "dependencies": {
-    "@types/supertest": "^2.0.9",
+    "@types/supertest": "^2.0.10",
     "express": "4.17.1",
-    "tarant": "2.7.31",
+    "tarant": "2.7.32",
     "tslib": "2.0.0"
   },
   "jest": {
