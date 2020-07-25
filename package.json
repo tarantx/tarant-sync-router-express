@@ -43,8 +43,8 @@
   "devDependencies": {
     "@types/express": "4.17.7",
     "@types/faker": "4.1.12",
-    "@types/jest": "26.0.5",
-    "@types/node": "14.0.23",
+    "@types/jest": "26.0.7",
+    "@types/node": "14.0.26",
     "body-parser": "1.19.0",
     "coveralls": "3.1.0",
     "faker": "4.1.0",
@@ -60,7 +60,7 @@
   "dependencies": {
     "@types/supertest": "^2.0.10",
     "express": "4.17.1",
-    "tarant": "2.7.34",
+    "tarant": "2.7.35",
     "tslib": "2.0.0"
   },
   "jest": {
