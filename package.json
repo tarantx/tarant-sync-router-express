@@ -1,6 +1,6 @@
 {
   "name": "tarant-sync-router-express",
-  "version": "0.2.35",
+  "version": "0.2.36",
   "description": "Actor model for reactive and scalable applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
