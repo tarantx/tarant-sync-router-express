@@ -26,7 +26,7 @@
     "lint": "tslint -p tsconfig.json",
     "test": "yarn format && yarn lint && jest test",
     "test:dev": "jest --watchAll test",
-    "test:cov": "yarn format && yarn lint && jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:cov": "yarn format && yarn lint && jest --coverage",
     "push": "yarn test && git push",
     "deploy:major": "yarn version --major",
     "deploy:minor": "yarn version --minor",
