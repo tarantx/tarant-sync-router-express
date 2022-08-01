@@ -3,7 +3,7 @@ import { ActorSystem } from 'tarant'
 import Actor from 'tarant/dist/actor-system/actor'
 import * as request from 'supertest'
 import * as express from 'express'
-import * as faker from 'faker'
+import { faker } from '@faker-js/faker'
 import { json } from 'body-parser'
 
 class FakeActor extends Actor {}
@@ -35,8 +35,8 @@ describe('index exports function that returns  express router', () => {
 
   describe('pull', () => {
     it('should pull actor data if found', async () => {
-      const id = faker.random.uuid(),
-        expectedresult = { stuff: faker.random.uuid() },
+      const id = faker.datatype.uuid(),
+        expectedresult = { stuff: faker.datatype.uuid() },
         ActorSystemMock: any = {
           actorFor: jest.fn(),
         }
@@ -53,7 +53,7 @@ describe('index exports function that returns  express router', () => {
     })
 
     it('should return 404 if unable to find actor', async () => {
-      const id = faker.random.uuid(),
+      const id = faker.datatype.uuid(),
         ActorSystemMock: any = {
           actorFor: jest.fn(),
         }
@@ -71,8 +71,8 @@ describe('index exports function that returns  express router', () => {
 
   describe('push', () => {
     it('should update state of an actor', async () => {
-      const id = faker.random.uuid(),
-        body = { stuff: faker.random.uuid(), type: 'FakeActor' },
+      const id = faker.datatype.uuid(),
+        body = { stuff: faker.datatype.uuid(), type: 'FakeActor' },
         ActorSystemMock: any = {
           resolveOrNew: jest.fn(),
         },
