@@ -674,10 +674,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@29.2.2":
-  version "29.2.2"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.2.2.tgz#874e7dc6702fa6a3fe6107792aa98636dcc480b4"
-  integrity sha512-og1wAmdxKoS71K2ZwSVqWPX6OVn3ihZ6ZT2qvZvZQm90lJVDyXIjYcu4Khx2CNIeaFv12rOU/YObOsI3VOkzog==
+"@types/jest@29.2.3":
+  version "29.2.3"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.2.3.tgz#f5fd88e43e5a9e4221ca361e23790d48fcf0a211"
+  integrity sha512-6XwoEbmatfyoCjWRX7z0fKMmgYKe9+/HrviJ5k0X/tjJWHGAezZOfYaxqQKuzG/TvQyr+ktjm4jgbk0s4/oF2w==
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
@@ -1073,9 +1073,9 @@ chokidar@^3.5.2:
     fsevents "~2.3.2"
 
 ci-info@^3.2.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.5.0.tgz#bfac2a29263de4c829d806b1ab478e35091e171f"
-  integrity sha512-yH4RezKOGlOhxkmhbeNuC4eYZKAUsEaGtBuBzDDP1eFUKiccDWzBABxBfOx31IDwDIXMTxWuwAxUGModvkbuVw==
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.6.1.tgz#7594f1c95cb7fdfddee7af95a13af7dbc67afdcf"
+  integrity sha512-up5ggbaDqOqJ4UqLKZ2naVkyqSJQgJi5lwD6b6mM748ysrghDBX0bx/qJTUHzw7zu6Mq4gycviSF5hJnwceD8w==
 
 cjs-module-lexer@^1.0.0:
   version "1.2.2"
@@ -2023,9 +2023,9 @@ jest-mock@^29.3.1:
     jest-util "^29.3.1"
 
 jest-pnp-resolver@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.2.tgz#b704ac0ae028a89108a4d040b3f919dfddc8e33c"
-  integrity sha512-olV41bKSMm8BdnuMsewT4jqlZ8+3TCARAXjZGT9jcoSnrfUnRCqnMoF9XEeoWjbzObpqF9dRhHQj0Xb9QdF6/w==
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.3.tgz#930b1546164d4ad5937d5540e711d4d38d4cad2e"
+  integrity sha512-+3NpwQEnRoIBtx4fyhblQDPgJI0H1IEIkX7ShLUjPGA7TtUTvI1oiKi3SR4oBR0hQhQR80l4WAe5RrXBwWMA8w==
 
 jest-regex-util@^29.2.0:
   version "29.2.0"
@@ -2976,10 +2976,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tarant@3.1.19:
-  version "3.1.19"
-  resolved "https://registry.yarnpkg.com/tarant/-/tarant-3.1.19.tgz#38d0b128993898cebd1d16768e61449be5bb94c9"
-  integrity sha512-P2KNZoR3haIg1bv7t3GbXxB3MSYigCABf3NAV7WAxVVROcayU7U+BW4KOVa4ZDvoYKcslaQ2luT0JKGzoMzyHA==
+tarant@3.1.20:
+  version "3.1.20"
+  resolved "https://registry.yarnpkg.com/tarant/-/tarant-3.1.20.tgz#11911b2478b2a1671084e7d50af47dcd7420647f"
+  integrity sha512-hZX/N8baoYWyjbXB0sOQCJiDlJIDzn7s0Y6bEx1caWxajtv++RC//J2BcqzCWcyF33RXx3lZlVyUquokEpFYMg==
   dependencies:
     tslib "2.4.1"
 
@@ -3114,10 +3114,10 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typescript@4.8.4:
-  version "4.8.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.4.tgz#c464abca159669597be5f96b8943500b238e60e6"
-  integrity sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==
+typescript@4.9.3:
+  version "4.9.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.3.tgz#3aea307c1746b8c384435d8ac36b8a2e580d85db"
+  integrity sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==
 
 undefsafe@^2.0.5:
   version "2.0.5"
