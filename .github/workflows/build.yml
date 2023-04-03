@@ -15,13 +15,17 @@ jobs:
         id: cache
         with:
           path: node_modules
-          key: ${{ runner.os }}-cache-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-cache-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-cache-
       - name: install dependencies
-        run: yarn install
+        run: npm install
       - name: test
-        run: yarn test:cov
+        run: npm run test:cov
+      - name: Publish coverage
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE_REPORTER_ID }}
       - uses: mikeal/merge-release@master
         if: github.event_name != 'pull_request'
         env:

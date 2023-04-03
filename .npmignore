@@ -7,6 +7,14 @@
 .travis.yml
 jestconfig.json
 README.md
-tsconfig.json
-tslint.json
 coverage
+.eslintrc.json
+.parcel-cache/
+.husky/
+.github/
+.czferc.js
+CODE_OF_CONDUCT.md
+cc-reporter*
+lint-staged.config.js
+tsconfig.json
+public-key.asc

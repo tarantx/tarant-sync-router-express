@@ -15,11 +15,11 @@ jobs:
           token: ${{ secrets.REPO_TOKEN }}
       - uses: actions/setup-node@master
       - name: install upgrade
-        run: yarn upgrade --latest
+        run:  npm outdated | awk 'NR>1 {print $1"@"$4}' | xargs npm install -E
       - name: install dependencies
-        run: yarn
+        run: npm install
       - name: run tests
-        run: yarn test
+        run: npm test
       - uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
